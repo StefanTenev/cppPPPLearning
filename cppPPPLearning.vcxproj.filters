@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="helloWorld.cpp">
+      <Filter>1_HelloWorld</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="PPPLibs">
+      <UniqueIdentifier>{113fb581-a37c-42a3-bc9f-16ec4ae6c5da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1_HelloWorld">
+      <UniqueIdentifier>{f3929ce3-297f-46a8-879b-ffb6048044fc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PPPheaders.h">
+      <Filter>PPPLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="PPP_support.h">
+      <Filter>PPPLibs</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
