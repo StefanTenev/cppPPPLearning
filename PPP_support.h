@@ -15,7 +15,7 @@ namespace PPP {
 
 	template<class T> concept Element = true;
 
-	PPP_EXPORT template <Element T>
+	template <Element T>
 		class Checked_vector : public std::vector<T> {	// trivially range-checked vector (no iterator checking)
 		public:
 			using std::vector<T>::vector;
@@ -37,7 +37,7 @@ namespace PPP {
 
 
 
-	PPP_EXPORT class Checked_string : public std::string {	// trivially range-checked string (no iterator checking)
+	class Checked_string : public std::string {	// trivially range-checked string (no iterator checking)
 	public:
 		using std::string::string;
 
@@ -55,7 +55,7 @@ namespace PPP {
 		// ... 
 	}; // range-checked string
 
-	PPP_EXPORT template<Element T>
+	template<Element T>
 		class Checked_span : public std::span<T> { // range-checked span -- use gsl::span?
 		public:
 			using std::span<T>::span;
@@ -79,41 +79,41 @@ namespace PPP {
 	//------- error handling ------
 
 
-	PPP_EXPORT struct Exit : std::runtime_error {
+	struct Exit : std::runtime_error {
 		Exit() : std::runtime_error("Exit") {}
 	};
 
-	PPP_EXPORT inline void simple_error(std::string& s)	// write ``error: s'' and exit program (for non-exception terminating error handling)
+	inline void simple_error(std::string& s)	// write ``error: s'' and exit program (for non-exception terminating error handling)
 	{
 		std::cerr << "error: " << s << '\n';
 		exit(1);
 	}
 
-	PPP_EXPORT inline void error(const std::string& s)	// error() simply disguises throws
+	inline void error(const std::string& s)	// error() simply disguises throws
 	{
 		throw std::runtime_error(s);
 	}
 
-	PPP_EXPORT inline void error(const std::string& s, const std::string& s2)
+	inline void error(const std::string& s, const std::string& s2)
 	{
 		error(s + s2);
 	}
 
-	PPP_EXPORT inline void error(const std::string& s, int i)
+	inline void error(const std::string& s, int i)
 	{
 		std::ostringstream os;
 		os << s << ": " << i;
 		error(os.str());
 	}
 
-	PPP_EXPORT enum class Error_action { ignore, throwing, terminating, logging, error };
+	enum class Error_action { ignore, throwing, terminating, logging, error };
 	struct except_error : std::runtime_error { using runtime_error::runtime_error; };
 
 	// pick a default:
-	PPP_EXPORT constexpr Error_action default_error_action = Error_action::error;
+	constexpr Error_action default_error_action = Error_action::error;
 
 	// take an action if an expected condition doesn't hold:
-	PPP_EXPORT template<Error_action action = default_error_action, typename C>
+	template<Error_action action = default_error_action, typename C>
 		constexpr void expect(C cond, std::string mess)
 	{
 		if constexpr (action == Error_action::logging)
@@ -131,18 +131,18 @@ namespace PPP {
 	//-------- narrowing --------
 
 
-	PPP_EXPORT template <class T, class U>
+	template <class T, class U>
 		constexpr T narrow_cast(U&& u) noexcept
 	{
 		return static_cast<T>(std::forward<U>(u));
 	}
 
-	PPP_EXPORT struct narrowing_error : public std::exception
+	struct narrowing_error : public std::exception
 	{
 		const char* what() const noexcept override { return "narrowing_error"; }
 	};
 
-	PPP_EXPORT template <class T, class U>
+	template <class T, class U>
 		constexpr T narrow(U u)
 	{
 		const T t = narrow_cast<T>(u);
@@ -152,18 +152,18 @@ namespace PPP {
 
 	//------- random numbers ------
 
-	PPP_EXPORT std::default_random_engine& get_rand()
+	inline std::default_random_engine& get_rand()
 	{
 		static std::default_random_engine ran;
 		return ran;
 	};
 
-	PPP_EXPORT void seed(int s) { get_rand().seed(s); }
-	PPP_EXPORT void seed() { get_rand().seed(); }
+	inline void seed(int s) { get_rand().seed(s); }
+	inline void seed() { get_rand().seed(); }
 
-	PPP_EXPORT inline int random_int(int min, int max) { return std::uniform_int_distribution<>{min, max}(get_rand()); }
+	inline int random_int(int min, int max) { return std::uniform_int_distribution<>{min, max}(get_rand()); }
 
-	PPP_EXPORT inline int random_int(int max) { return random_int(0, max); }
+	inline int random_int(int max) { return random_int(0, max); }
 
 
 	template<typename C>
