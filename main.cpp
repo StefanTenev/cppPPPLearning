@@ -1,8 +1,9 @@
-#include <cstdio>
-
 #include "helloWorld.cpp"
+#include "objectsTypesAndValues.cpp"
 int main()
 {
-    helloWorld();
+    // helloWorld();
+    objectsTypesAndValues();
+
     return 0;
 }
