@@ -5,6 +5,21 @@
     <ClCompile Include="helloWorld.cpp">
       <Filter>1_HelloWorld</Filter>
     </ClCompile>
+    <ClCompile Include="objectsTypesAndValues.cpp">
+      <Filter>2_ObjectsTypesAndValues</Filter>
+    </ClCompile>
+    <ClCompile Include="drill.cpp">
+      <Filter>2_ObjectsTypesAndValues\Drill</Filter>
+    </ClCompile>
+    <ClCompile Include="exercises.cpp">
+      <Filter>2_ObjectsTypesAndValues\Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="follow_along.cpp">
+      <Filter>2_ObjectsTypesAndValues\FollowAlong</Filter>
+    </ClCompile>
+    <ClCompile Include="drill_custom_functions.cpp">
+      <Filter>2_ObjectsTypesAndValues\Drill</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="PPPLibs">
@@ -12,6 +27,18 @@
     </Filter>
     <Filter Include="1_HelloWorld">
       <UniqueIdentifier>{f3929ce3-297f-46a8-879b-ffb6048044fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_ObjectsTypesAndValues">
+      <UniqueIdentifier>{e519f818-c46a-4ec9-ae34-89e00f7a5255}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_ObjectsTypesAndValues\Drill">
+      <UniqueIdentifier>{c42d6946-fc71-4715-b18c-c8bea6da5880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_ObjectsTypesAndValues\Exercises">
+      <UniqueIdentifier>{1cf59eac-a1e6-4835-9d3b-5e8749e0348d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_ObjectsTypesAndValues\FollowAlong">
+      <UniqueIdentifier>{73dbf41f-8d57-4c9c-9b27-77b3820546eb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
