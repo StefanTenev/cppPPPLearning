@@ -8,8 +8,8 @@ static void objectsTypesAndValues() {
 	//follow_along();
 
 	/* drill functions */
-	drill();
+	//drill();
 
 	/* exercises functions */
-	//exercises();
+	exercises();
 }
