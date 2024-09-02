@@ -1,6 +1,10 @@
 #include <iostream>
 #include <string>
 
+// I was wondering whether to keep this as one whole file or extract it into a files for each exercise
+// However, the functions are not too big and seemed manageable enough
+// Moreover, since I am still not sure what is the right way of having module files for c++, I know that this is doable,
+// whereas putting the code in cpp files might be a bit SUS
 
 /* 
 * Exercise 2 - converting miles to km
@@ -37,7 +41,7 @@ inline void miles_to_km() {
 //}
 
 /*
-* Exercise 4 - prompt for 2 int values and perform some operations on them
+* Exercise 4 - prompt for 2 int values and perform some operations on them 
 	considerations for improvement:
 	- add input validation
 	- add error if no value is enter/inform that base values will be 0
@@ -48,6 +52,8 @@ inline void operations() {
 
 	int val1 = 0;
 	int val2 = 0;
+
+	
 
 	std::cout << "Enter value 1: ";
 	std::cin >> val1;
@@ -94,6 +100,62 @@ inline void operations() {
 	std::cout << "Ratio (remember - variables are ints and so values will be truncated) value 1 : value 2 - 1" << " : " << val2 / val1;
 	std::cout << '\n';
 }
+
+/*
+* Exercise 7 - sort 3 string inputs
+*/
+
+inline void sort_3_inputs() {
+
+	std::string input1;
+	std::string input2;
+	std::string input3;
+
+	std::cout << "This programme sorts 3 string inputs.\n"
+		<< "Enter input 1: ";
+	std::cin >> input1;
+
+	std::cout << '\n';
+
+	std::cout << "Enter input 2: ";
+	std::cin >> input2;
+
+	std::cout << '\n';
+
+	std::cout << "Enter input 3: ";
+	std::cin >> input3;
+
+	std::cout << '\n' 
+		<< "Your inputs in order: ";
+
+	if (input1 >= input2 && input1 >= input3) {
+		if (input2 >= input3) {
+			std::cout << input1 << " " << input2 << " " << input3;
+		}
+		else {
+			std::cout << input1 << " " << input3 << " " << input2;
+		}
+	}
+	else if (input2 >= input1 && input2 >= input3) {
+		if (input1 >= input3) {
+			std::cout << input2 << " " << input1 << " " << input3;
+		}
+		else {
+			std::cout << input2 << " " << input3 << " " << input1;
+		}
+	}
+	else if (input3 >= input1 && input3 >= input2) {
+		if (input1 >= input2) {
+			std::cout << input3 << " " << input1 << " " << input2;
+		}
+		else{
+			std::cout << input3 << " " << input2 << " " << input1;
+		}
+	}
+
+
+}
+
 
 inline void exercises() {
 	// miles_to_km();
