@@ -126,26 +126,26 @@ inline void sort_3_inputs() {
 	std::cin >> input3;
 
 	std::cout << '\n' 
-		<< "Your inputs in order: ";
+		<< "Your inputs in order (first to last): ";
 
-	if (input1 >= input2 && input1 >= input3) {
-		if (input2 >= input3) {
+	if (input1 <= input2 && input1 <= input3) {
+		if (input2 <= input3) {
 			std::cout << input1 << " " << input2 << " " << input3;
 		}
 		else {
 			std::cout << input1 << " " << input3 << " " << input2;
 		}
 	}
-	else if (input2 >= input1 && input2 >= input3) {
-		if (input1 >= input3) {
+	else if (input2 <= input1 && input2 <= input3) {
+		if (input1 <= input3) {
 			std::cout << input2 << " " << input1 << " " << input3;
 		}
 		else {
 			std::cout << input2 << " " << input3 << " " << input1;
 		}
 	}
-	else if (input3 >= input1 && input3 >= input2) {
-		if (input1 >= input2) {
+	else if (input3 <= input1 && input3 <= input2) {
+		if (input1 <= input2) {
 			std::cout << input3 << " " << input1 << " " << input2;
 		}
 		else{
@@ -153,12 +153,15 @@ inline void sort_3_inputs() {
 		}
 	}
 
-
 }
 
+/*
+* Exercise
+*/
 
 inline void exercises() {
 	// miles_to_km();
 	// illegal_names();
-	operations();
+	// operations();
+	sort_3_inputs();
 }
