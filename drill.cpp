@@ -30,7 +30,7 @@ inline void custom_letter() {
 	}
 
 	std::cout << "Your formatted letter:\n\n"
-		<< "Dear" << first_name_to << " " << last_name_to << ",\n\n"
+		<< "Dear " << first_name_to << " " << last_name_to << ",\n\n"
 		<< content << "\n\n"
 		<< "Best regards,\n"
 		<< first_name << " " << last_name << '\n';
