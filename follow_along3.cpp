@@ -1,0 +1,38 @@
+﻿#include <iostream>
+
+inline void pound_to_dollar() {
+	
+	constexpr double rate_to_dollars = 1.31;
+	constexpr char pounds_to_dollars = '1';
+	constexpr char dollars_to_pounds = '2';
+
+	char conversion_choice = 'x';
+
+	double conversion_amount = 0;
+
+	std::cout << "This program converts British pound/s (£) into US dollar/s ($) (exchange rate for 02/09/2024).\n"
+		<< "If you would like to convert pounds to dollars, please press one, else press 2.\n";
+	std::cin >> conversion_choice;
+
+	if (conversion_choice != '1' && conversion_choice != '2') {
+		std::cout << "I'm sorry, I didn't recognise this input, please try again, using only '1' or '2'";
+		return;
+	}
+
+	std::cout << "Please enter the amount which you would like to convert: ";
+	std::cin >> conversion_amount;
+
+	// converting pounds to dollars - note the necessity to turn the pound symbol into a string as it is not a recognised char..
+	if (conversion_choice == pounds_to_dollars) {
+		std::cout << "£" << conversion_amount << " = " << '$' << conversion_amount * rate_to_dollars;
+	}
+	else if (conversion_choice == dollars_to_pounds) {
+		std::cout << '$' << conversion_amount << " = " << "£" << conversion_amount / rate_to_dollars;
+	}
+
+	
+}
+
+static void follow_along3() {
+	pound_to_dollar();
+}
