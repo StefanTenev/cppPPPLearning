@@ -12,4 +12,5 @@ static void objectsTypesAndValues() {
 
 	/* exercises functions */
 	exercises();
+
 }
