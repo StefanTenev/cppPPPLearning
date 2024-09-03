@@ -75,10 +75,12 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="computation.cpp" />
     <ClCompile Include="drill.cpp" />
     <ClCompile Include="drill_custom_functions.cpp" />
     <ClCompile Include="exercises.cpp" />
     <ClCompile Include="follow_along.cpp" />
+    <ClCompile Include="follow_along3.cpp" />
     <ClCompile Include="helloWorld.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="objectsTypesAndValues.cpp" />
