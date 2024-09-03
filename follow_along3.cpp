@@ -1,7 +1,8 @@
 ﻿#include <iostream>
+#include <vector>
 
 inline void pound_to_dollar() {
-	
+
 	constexpr double rate_to_dollars = 1.31;
 	constexpr char pounds_to_dollars = '1';
 	constexpr char dollars_to_pounds = '2';
@@ -29,10 +30,36 @@ inline void pound_to_dollar() {
 	else if (conversion_choice == dollars_to_pounds) {
 		std::cout << '$' << conversion_amount << " = " << "£" << conversion_amount / rate_to_dollars;
 	}
+}
 
-	
+inline void while_example() {
+	int i = 0;
+	while (i < 26) {
+		char iterating_char = 'a' + i;
+		std::cout << iterating_char << " ASCII : " << ('a' + i) << '\n';
+		++i;
+	}
+}
+
+inline void for_example() {
+	char iterating_char;
+	for (int i = 0; i < 26; i++) {
+		iterating_char = 'a' + i;
+		std::cout << iterating_char << " ASCII : " << ('a' + i) << '\n';
+
+	}
 }
 
 static void follow_along3() {
-	pound_to_dollar();
+	// pound_to_dollar();
+	// while_example();
+	// for_example();
+
+	std::vector<std::string> words = { "a", "man", "a", "plan", "a", "canal", "panama" };
+
+	for (int i = 0; i < words.size(); ++i) {
+		if (i == 0 || words[i - 1] != words[i]) {
+			std::cout << words[i] << "\n";
+		}
+	}
 }
