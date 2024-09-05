@@ -32,6 +32,9 @@
     <ClCompile Include="drill3_custom_functions.cpp">
       <Filter>3_Computation\Drill</Filter>
     </ClCompile>
+    <ClCompile Include="exercises3.cpp">
+      <Filter>3_Computation\Exercises</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="PPPLibs">
@@ -60,6 +63,9 @@
     </Filter>
     <Filter Include="3_Computation\Drill">
       <UniqueIdentifier>{e67c48ac-5e6f-414b-a4d0-1b17e4b7ecf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3_Computation\Exercises">
+      <UniqueIdentifier>{fa3d92e6-23f7-4700-a023-02d04e707fcb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

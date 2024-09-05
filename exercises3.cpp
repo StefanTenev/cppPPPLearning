@@ -1,0 +1,3 @@
+static void exercises3() {
+
+}
