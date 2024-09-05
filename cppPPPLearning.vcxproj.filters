@@ -26,12 +26,6 @@
     <ClCompile Include="follow_along3.cpp">
       <Filter>3_Computation\FollowAlong</Filter>
     </ClCompile>
-    <ClCompile Include="drill3.cpp">
-      <Filter>3_Computation\Drill</Filter>
-    </ClCompile>
-    <ClCompile Include="drill3_custom_functions.cpp">
-      <Filter>3_Computation\Drill</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="PPPLibs">
@@ -57,9 +51,6 @@
     </Filter>
     <Filter Include="3_Computation\FollowAlong">
       <UniqueIdentifier>{69f9b12a-26dc-445d-bb07-9f75a5711114}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="3_Computation\Drill">
-      <UniqueIdentifier>{e67c48ac-5e6f-414b-a4d0-1b17e4b7ecf2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
