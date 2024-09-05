@@ -1,5 +1,6 @@
 #include "follow_along3.cpp"
 #include "drill3.cpp"
+#include "exercises3.cpp"
 
 static void computation() {
 
@@ -7,6 +8,8 @@ static void computation() {
 	//follow_along3();
 
 	/* drill functions */
-	drill3();
+	// drill3();
 
+	/* exercise functions */
+	exercises3();
 }
