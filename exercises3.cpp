@@ -1,11 +1,14 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <ranges>
+#include <algorithm>
 
 /*
 * Exercise 2 - a [rogram reading an input and thne logging each char and its integer value on a new line
 */
 
-inline void ex2() {
+inline void ex3_2() {
 	std::cout << "Enter input:\n";
 
 	std::string input;
@@ -20,7 +23,34 @@ inline void ex2() {
 
 }
 
+inline void find_median() {
+
+	std::cout << "This programme calculates the median of a number sequence.\n"
+		<< "Please enter your number sequence by entering a number, followed by enter.\n"
+		<< "Press control + Z(windows) / control + D(linux) to mark the end of your input.\n"
+		<< "Your sequence:\n";
+
+	std::vector<double> number_sequence;
+
+	for (int temp; std::cin >> temp;) {
+		number_sequence.push_back(temp);
+	}
+
+	std::ranges::sort(number_sequence);
+
+	if (number_sequence.size() % 2 == 0) {
+		double median = (number_sequence[number_sequence.size() / 2] + number_sequence[(number_sequence.size() / 2) - 1]) / 2;
+
+		std::cout << "Median: " << median;
+	}
+	else {
+		double median = number_sequence[number_sequence.size() / 2];
+		std::cout << "Median: " << median << number_sequence.size();
+	}
+}
+
 
 static void exercises3() {
-	ex2();
+	//ex2();
+	find_median();
 }
