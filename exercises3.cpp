@@ -3,6 +3,7 @@
 #include <vector>
 #include <ranges>
 #include <algorithm>
+#include "exercises3_custom_functions.cpp"
 
 /*
 * Exercise 2 - a [rogram reading an input and thne logging each char and its integer value on a new line
@@ -50,7 +51,15 @@ inline void find_median() {
 }
 
 
+inline void squares_of_two() {
+	std::cout << "This programme shows the squares of two - up to 64\n";
+	for (int i = 0; i < 65; i++) {
+		std::cout << "2 ^ " << i << " = " << num_to_power(2, i) << '\n';
+	}
+}
+
 static void exercises3() {
 	//ex2();
-	find_median();
+	//find_median();
+	squares_of_two();
 }
