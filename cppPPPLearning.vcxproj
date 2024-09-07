@@ -77,8 +77,6 @@
   <ItemGroup>
     <ClCompile Include="computation.cpp" />
     <ClCompile Include="drill.cpp" />
-    <ClCompile Include="drill3.cpp" />
-    <ClCompile Include="drill3_custom_functions.cpp" />
     <ClCompile Include="drill_custom_functions.cpp" />
     <ClCompile Include="exercises.cpp" />
     <ClCompile Include="exercises3.cpp" />

@@ -70,9 +70,6 @@
     <Filter Include="3_Computation\Exercises">
       <UniqueIdentifier>{fa3d92e6-23f7-4700-a023-02d04e707fcb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="4_Errors">
-      <UniqueIdentifier>{57505d7c-dc6f-48d1-96c9-b92936582155}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PPPheaders.h">
