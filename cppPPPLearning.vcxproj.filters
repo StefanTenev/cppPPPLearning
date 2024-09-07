@@ -20,6 +20,24 @@
     <ClCompile Include="drill_custom_functions.cpp">
       <Filter>2_ObjectsTypesAndValues\Drill</Filter>
     </ClCompile>
+    <ClCompile Include="computation.cpp">
+      <Filter>3_Computation</Filter>
+    </ClCompile>
+    <ClCompile Include="follow_along3.cpp">
+      <Filter>3_Computation\FollowAlong</Filter>
+    </ClCompile>
+    <ClCompile Include="drill3.cpp">
+      <Filter>3_Computation\Drill</Filter>
+    </ClCompile>
+    <ClCompile Include="drill3_custom_functions.cpp">
+      <Filter>3_Computation\Drill</Filter>
+    </ClCompile>
+    <ClCompile Include="exercises3.cpp">
+      <Filter>3_Computation\Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="exercises3_custom_functions.cpp">
+      <Filter>3_Computation\Exercises</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="PPPLibs">
@@ -39,6 +57,21 @@
     </Filter>
     <Filter Include="2_ObjectsTypesAndValues\FollowAlong">
       <UniqueIdentifier>{73dbf41f-8d57-4c9c-9b27-77b3820546eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3_Computation">
+      <UniqueIdentifier>{9cfd1f91-3a71-4a0f-8053-41b7a3c3991c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3_Computation\FollowAlong">
+      <UniqueIdentifier>{69f9b12a-26dc-445d-bb07-9f75a5711114}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3_Computation\Drill">
+      <UniqueIdentifier>{e67c48ac-5e6f-414b-a4d0-1b17e4b7ecf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3_Computation\Exercises">
+      <UniqueIdentifier>{fa3d92e6-23f7-4700-a023-02d04e707fcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="4_Errors">
+      <UniqueIdentifier>{57505d7c-dc6f-48d1-96c9-b92936582155}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
