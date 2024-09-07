@@ -58,8 +58,18 @@ inline void squares_of_two() {
 	}
 }
 
+inline void primes_to_100() {
+	std::cout << "Prime numbers 1 - 100: \n";
+	for (int i = 2; i <= 100; i++) {
+		if (check_if_prime(i)) {
+			std::cout << i << '\n';
+		}
+	}
+}
+
 static void exercises3() {
 	//ex2();
 	//find_median();
-	squares_of_two();
+	//squares_of_two();
+	primes_to_100();
 }
