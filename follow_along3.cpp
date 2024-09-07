@@ -53,5 +53,13 @@ inline void for_example() {
 static void follow_along3() {
 	// pound_to_dollar();
 	// while_example();
-	 for_example();
+	// for_example();
+
+	std::vector<std::string> words = { "a", "man", "a", "plan", "a", "canal", "panama" };
+
+	for (int i = 0; i < words.size(); ++i) {
+		if (i == 0 || words[i - 1] != words[i]) {
+			std::cout << words[i] << "\n";
+		}
+	}
 }
