@@ -35,3 +35,5 @@ static double check_if_prime(int num) {
 	}
 	return true;
 }
+
+

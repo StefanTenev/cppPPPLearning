@@ -4,6 +4,7 @@
 #include <ranges>
 #include <algorithm>
 #include "exercises3_custom_functions.cpp"
+#include <cmath>
 
 /*
 * Exercise 2 - a [rogram reading an input and thne logging each char and its integer value on a new line
@@ -67,9 +68,41 @@ inline void primes_to_100() {
 	}
 }
 
+inline double quadratic_solver(double a, double b, double c) {
+	// -b +/- _/(b^2 -4ac)
+	//	----------------
+	//		  2a
+
+	// check if correct input is given
+	if (a == 0 || b == 0 || c == 0) {
+		std::cout << "Error: a, b & c must be non-zero values!";\
+			return;
+	}
+
+	double root = b * b - 4 * a * c;
+
+	// check if root is negative
+	if (root < 0) {
+		std::cout << "This quadratic has no solutions!";
+		return;
+	}
+
+	double solution_1 = (-b + sqrt(root)) / 2 * a;
+	double solution_2 = (-b - sqrt(root)) / 2 * a;
+
+	// check if there is only one solution
+	if (solution_1 == solution_2) {
+		std::cout << "Solution: " << solution_1;
+	}
+	else {
+		std::cout << "Solutions: " << solution_1 << " & " << solution_2;
+	}
+}
+
 static void exercises3() {
 	//ex2();
 	//find_median();
 	//squares_of_two();
-	primes_to_100();
+	//primes_to_100();
+	quadratic_solver(1, 3, 2);
 }
