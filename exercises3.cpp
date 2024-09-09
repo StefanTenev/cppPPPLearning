@@ -76,7 +76,7 @@ inline double quadratic_solver(double a, double b, double c) {
 	// check if correct input is given
 	if (a == 0 || b == 0 || c == 0) {
 		std::cout << "Error: a, b & c must be non-zero values!";\
-			return;
+			return 0;
 	}
 
 	double root = b * b - 4 * a * c;
@@ -84,7 +84,7 @@ inline double quadratic_solver(double a, double b, double c) {
 	// check if root is negative
 	if (root < 0) {
 		std::cout << "This quadratic has no solutions!";
-		return;
+		return 0;
 	}
 
 	double solution_1 = (-b + sqrt(root)) / 2 * a;
@@ -101,7 +101,7 @@ inline double quadratic_solver(double a, double b, double c) {
 
 static void exercises3() {
 	//ex2();
-	//find_median();
+	//find_median(); 
 	//squares_of_two();
 	//primes_to_100();
 	quadratic_solver(1, 3, 2);
