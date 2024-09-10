@@ -59,9 +59,9 @@ inline void squares_of_two() {
 	}
 }
 
-inline void primes_to_100() {
-	std::cout << "Prime numbers 1 - 100: \n";
-	for (int i = 2; i <= 100; i++) {
+inline void primes_to_n(int n) {
+	std::cout << "Prime numbers 1 - " << n << " : ";
+	for (int i = 2; i <= n; i++) {
 		if (check_if_prime(i)) {
 			std::cout << i << '\n';
 		}
@@ -103,6 +103,8 @@ static void exercises3() {
 	//ex2();
 	//find_median(); 
 	//squares_of_two();
-	//primes_to_100();
-	quadratic_solver(1, 3, 2);
+	//primes_to_n(100);
+	 quadratic_solver(1, 3, 2);
+
+	//std::cout << num_to_power(2, -3);
 }
