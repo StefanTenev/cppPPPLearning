@@ -1,5 +1,3 @@
-#include <iostream>
-
 static double num_to_power(double num, int power){
 
 	if (power == 0) {
@@ -17,7 +15,6 @@ static double num_to_power(double num, int power){
 	else if (power < 0) {
 		for (int i = -1; i > power; i--) {
 			number *= num;
-			std::cout << "Line: " << i << " " << power << " " << number << "\n";
 		}
 		return 1 / number;
 	}
