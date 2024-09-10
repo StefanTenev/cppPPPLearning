@@ -1,4 +1,3 @@
-#include <iostream>
 static double num_to_power(double num, int power){
 
 	if (power == 0) {
@@ -13,12 +12,12 @@ static double num_to_power(double num, int power){
 		}
 		return number;
 	}
-	//else if (power < 0) {
-	//	for (int i = -1; i < power; i--) {
-	//		number *= num;
-	//	}
-	//	return num / number;
-	//}
+	else if (power < 0) {
+		for (int i = -1; i > power; i--) {
+			number *= num;
+		}
+		return 1 / number;
+	}
 }
 
 static double check_if_prime(int num) {
